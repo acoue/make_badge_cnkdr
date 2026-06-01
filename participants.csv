@@ -1,0 +1,6 @@
+nom;prenom;fonction;photo;pays;drapeau;genre;ligne_libre;options
+Machura;Lukasz;Competiteur;photos/lukasz.jpg;Poland;flags/pl.png;M;renshi 6 dan individual;lunch,bus,sayo
+DUPONT;Jean;Competiteur;photos/jean_dupont.jpg;France;flags/fr.png;M;Test ligne libre;lunch,bus
+MARTIN;Anna;Coach;photos/anna_martin.jpg;Germany;flags/de.png;F;Test ligne libre;lunch,bus,sayo
+DURAND;Luc;Arbitre;photos/luc_durand.jpg;Belgium;flags/be.png;M;Test ligne libre;lunch,bus
+BERNARD;Sophie;Bénévole;photos/sophie_bernard.jpg;Spain;flags/es.png;F;Test ligne libre;lunch,bus,sayo
