@@ -65,5 +65,8 @@ logs/
 *.swp
 *~
 
-photos/
+assets/photos/
+*.png
 results/
+*.pdf
+results/badges.pdf
