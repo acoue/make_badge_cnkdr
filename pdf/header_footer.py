@@ -2,7 +2,7 @@ from reportlab.lib.utils import ImageReader
 from reportlab.lib import colors
 import os
 from PIL import Image
-from config import TITLE, SUBTITLE, LOGO_HEADER_PATH, LOGO_FOOTER_PATH, HEADER_HEIGHT, TOP_MARGIN_HEADER,FONT_BOLD_NAME, FONT_NAME
+from config import SPACE_HEADER_TO_TITRE, TITLE, SUBTITLE, LOGO_HEADER_PATH, LOGO_FOOTER_PATH, HEADER_HEIGHT, TOP_MARGIN_HEADER,FONT_BOLD_NAME, FONT_NAME
 
 
 def draw_header(c, width, height):
@@ -24,7 +24,7 @@ def draw_header(c, width, height):
         )
 
     # Texte sous le header
-    text_y = height - HEADER_HEIGHT - 15
+    text_y = height - HEADER_HEIGHT - SPACE_HEADER_TO_TITRE
 
     c.setFillColor(colors.black)
     c.setFont(FONT_BOLD_NAME, 10)

@@ -2,17 +2,17 @@ import os
 from PIL import Image, ImageOps
 import qrcode
 
-ASSETS_PATH = "assets"
-
+from config import ASSETS_DIR, FLAGS_DIR, PHOTOS_DIR
 
 def load_photo(path, width, height, genre):
-    default_men = os.path.join(ASSETS_PATH, "men.png")
-    default_women = os.path.join(ASSETS_PATH, "women.png")
+    full_path = PHOTOS_DIR / path
+    default_men = PHOTOS_DIR / "men.png"
+    default_women = PHOTOS_DIR / "women.png"
 
     img_path = None
 
-    if path and os.path.exists(path):
-        img_path = path
+    if path and os.path.exists(full_path):
+        img_path = full_path
     else:
         if not path or not os.path.exists(path):
             if genre.lower() == "f":
@@ -29,8 +29,9 @@ def load_photo(path, width, height, genre):
 
 
 def load_flag(path, width, height):
+    full_path = FLAGS_DIR / path
     try:
-        img = Image.open(path).convert("RGB")
+        img = Image.open(full_path).convert("RGB")
         return ImageOps.contain(img, (width, height))
     except:
         return Image.new("RGB", (width, height), (240, 240, 240))
