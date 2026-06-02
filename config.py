@@ -220,3 +220,73 @@ EDITORIAL = {
     # --------------------
     "FOOTER_SAFE_MARGIN": 10,   # évite chevauchement avec footer
 }
+
+# ============================================================
+# 🔳 VERSO / QR CODE
+# ============================================================
+QR_BACK = {
+    # Titre optionnel du verso
+    "TITLE": "Informations & accès",
+
+    # Mise en page générale
+    "TOP_MARGIN": 45,
+    "BOTTOM_MARGIN": 45,
+    "LEFT_MARGIN": 25,
+    "RIGHT_MARGIN": 25,
+    "ROW_GAP": 22,
+    "COL_GAP": 18,
+
+    # QR
+    "QR_SIZE": 90,
+    "QR_BORDER": 2,
+    "QR_BOX_SIZE": 10,
+    "QR_ERROR_CORRECTION": "H",
+
+    # Logo au centre du QR (petit logo)
+    "QR_LOGO_PATH": ASSETS_DIR / "qr_center_logo.png",
+    "QR_LOGO_RATIO": 0.22,   # 22% de la largeur du QR
+    "QR_LOGO_PADDING": 4,    # fond blanc autour du logo
+
+    # Texte sous chaque QR
+    "LABEL_FONT_NAME": "Helvetica",
+    "LABEL_FONT_SIZE": 9,
+    "LABEL_LINE_HEIGHT": 11,
+    "LABEL_MAX_CHARS": 22,
+}
+
+# ============================================================
+# 🔳 LIGNES DE QR À GÉNÉRER SUR LE VERSO
+# Chaque élément de la liste = une ligne
+# Chaque ligne = une liste de QR
+# ============================================================
+BACK_QR_ROWS = [
+    [
+        {
+            "label": "Accès badge",
+            "data": "EJC2026|badge_access"
+        },
+        {
+            "label": "Programme",
+            "data": "https://ejc2026.fr/programme"
+        },
+        {
+            "label": "Règlement",
+            "data": "https://ejc2026.fr/reglement"
+        },
+
+    ],
+    [
+        {
+            "label": "Transport",
+            "data": "https://ejc2026.fr/transport"
+        },
+        {
+            "label": "Restauration",
+            "data": "https://ejc2026.fr/restauration"
+        },
+        {
+            "label": "Contacts",
+            "data": "EJC2026|contact"
+        },
+    ],
+]

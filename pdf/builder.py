@@ -1,31 +1,35 @@
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A5
 
-from pdf.badge_layout import draw_badge, draw_back_qr_layout
 from pdf.header_footer import draw_header, draw_footer
-from config import AUTHOR, BACKGROUND_COLOR,DOCUMENT_RECTO_VERSO, PROJECT_NAME, TITLE
+from pdf.make_badge_vertical import draw_vertical_layout
+from pdf.make_badge_editorial import draw_editorial_layout
+from pdf.make_verso import draw_back_qr_layout
+from config import DOCUMENT_RECTO_VERSO, OPTION_PICTO_MAP, PROJECT_NAME, AUTHOR
 
-def generate_pdf(participants, output, layout_mode, debug=False):
+
+def generate_pdf(participants, output, layout_mode="vertical", debug=False):
     c = canvas.Canvas(output, pagesize=A5)
-    width, height = A5
-
-    c.setAuthor(AUTHOR)
     c.setTitle(PROJECT_NAME)
-    c.setSubject(TITLE)
+    c.setAuthor(AUTHOR)
 
-    c.setFillColor(BACKGROUND_COLOR)
-    c.rect(0, 0, width, height, fill=1, stroke=0)
+    width, height = A5
 
     for p in participants:
         # RECTO
         draw_header(c, width, height)
-        draw_badge(c, p, layout_mode=layout_mode, debug=debug)
+
+        if layout_mode == "editorial":
+            draw_editorial_layout(c, p, OPTION_PICTO_MAP, debug=debug)
+        else:
+            draw_vertical_layout(c, p, OPTION_PICTO_MAP, debug=debug)
+
         draw_footer(c, width)
         c.showPage()
 
+        # VERSO
         if DOCUMENT_RECTO_VERSO:
-            # DOCUMENT_RECTO_VERSO (QR)
-            draw_back_qr_layout(c, p, lines_count=3, debug=debug)
+            draw_back_qr_layout(c, p, debug=debug)
             c.showPage()
 
     c.save()

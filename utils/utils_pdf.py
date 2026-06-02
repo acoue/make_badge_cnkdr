@@ -93,3 +93,40 @@ def render_text_box_centered(
 #             )
 
 #     return y - DEFAULT_PICTO_SIZE - 10
+
+# ============================================================
+# 🧠 CONTEXTE PARTICIPANT (QR / template)
+# ============================================================
+
+def participant_context(participant):
+    """
+    Extrait toutes les données utiles d’un participant
+    sous forme de dictionnaire pour le templating (QR, etc.)
+    """
+    return {
+        "nom": getattr(participant, "nom", "") or "",
+        "prenom": getattr(participant, "prenom", "") or "",
+        "fonction": getattr(participant, "fonction", "") or "",
+        "pays": getattr(participant, "pays", "") or "",
+        "photo": getattr(participant, "photo", "") or "",
+        "drapeau": getattr(participant, "drapeau", "") or "",
+        "ligne_libre": getattr(participant, "ligne_libre", "") or "",
+        "options": getattr(participant, "options", "") or "",
+        "genre": getattr(participant, "genre", "") or "",
+    }
+
+
+# ============================================================
+# 🔧 FORMAT SÉCURISÉ
+# ============================================================
+
+def safe_format(template, values):
+    """
+    Permet d’utiliser str.format sans planter si une clé est absente
+    """
+
+    class SafeDict(dict):
+        def __missing__(self, key):
+            return ""
+
+    return template.format_map(SafeDict(values))
