@@ -30,7 +30,6 @@ FONT_BOLD_NAME = "Helvetica-Bold"
 # Couleur de fond du badge
 BACKGROUND_COLOR = colors.HexColor("#FFFFFF")
 
-
 BORDER_PHOTO_WIDTH = 1
 BORDER_FLAG_WIDTH = 1
 
