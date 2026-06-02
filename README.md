@@ -52,8 +52,8 @@ python main.py --csv participants.csv --debug
 # 📄 Format du CSV
 ```
 nom;prenom;fonction;pays;photo;drapeau;ligne_libre;options
-DUPONT;Jean;competiteur;France;photos/jean.jpg;flags/fr.png;Test ligne libre;bus,lunch
-MARTIN;Paul;coach;Germany;photos/paul.jpg;flags/de.png;Coach équipe;
+DUPONT;Jean;competiteur;France;jean.jpg;fr.png;Test ligne libre;bus,lunch
+MARTIN;Paul;coach;Germany;paul.jpg;de.png;Coach équipe;
 ```
 
 # 🎨 Layouts disponibles
