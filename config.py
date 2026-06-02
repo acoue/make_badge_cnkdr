@@ -31,6 +31,12 @@ FONT_BOLD_NAME = "Helvetica-Bold"
 BACKGROUND_COLOR = colors.HexColor("#FFFFFF")
 
 
+BORDER_PHOTO_WIDTH = 1
+BORDER_FLAG_WIDTH = 1
+
+BORDER_PHOTO_COLOR = colors.HexColor("#333333")
+BORDER_FLAG_COLOR = colors.HexColor("#000000")
+
 # ============================================================
 # 📁 CHEMINS (ASSETS)
 # ============================================================
@@ -73,8 +79,9 @@ ROLE_STYLES = {
     "coach": ("COACH", colors.HexColor("#0E7490")),
     "competiteur": ("COMPÉTITEUR", colors.HexColor("#B91C1C")),
     "commissaire": ("COMMISSAIRE", colors.HexColor("#77670C")),
-    "arbitre": ("ARBITRE", colors.HexColor("#4F46E5")),
+    "referee": ("ARBITRE", colors.HexColor("#4F46E5")),
     "bénévole": ("BÉNÉVOLE", colors.HexColor("#15803D")),
+    "delegation": ("DÉLÉGATION", colors.HexColor("#7C3AED")),
 }
 
 # Hauteur du bandeau rôle
@@ -262,16 +269,16 @@ QR_BACK = {
 BACK_QR_ROWS = [
     [
         {
-            "label": "Accès badge",
-            "data": "EJC2026|badge_access"
+            "label": "Location",
+            "data": "https://www.ejc2026.fr/location/"
         },
         {
-            "label": "Programme",
-            "data": "https://ejc2026.fr/programme"
+            "label": "Schedule",
+            "data": "https://www.ejc2026.fr/schedule/"
         },
         {
-            "label": "Règlement",
-            "data": "https://ejc2026.fr/reglement"
+            "label": "Rules and Regulations",
+            "data": "https://www.ejc2026.fr/rules-and-regulations/"
         },
 
     ],
@@ -281,12 +288,18 @@ BACK_QR_ROWS = [
             "data": "https://ejc2026.fr/transport"
         },
         {
-            "label": "Restauration",
-            "data": "https://ejc2026.fr/restauration"
+            "label": "Competitors Lunch",
+            "data": "https://www.ejc2026.fr/competitors-lunch/"
         },
         {
-            "label": "Contacts",
-            "data": "EJC2026|contact"
+            "label": "Official’s Lunch",
+            "data": "https://www.ejc2026.fr/officiels-lunch/"
         },
     ],
+    [
+        {
+            "label": "Contact",
+            "data": "https://www.ejc2026.fr/contact/"
+        },
+    ]
 ]

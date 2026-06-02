@@ -12,7 +12,7 @@ def generate_pdf(participants, output, layout_mode="vertical", debug=False):
     c = canvas.Canvas(output, pagesize=A5)
     c.setTitle(PROJECT_NAME)
     c.setAuthor(AUTHOR)
-
+    c.setPageCompression(1)
     width, height = A5
 
     for p in participants:
