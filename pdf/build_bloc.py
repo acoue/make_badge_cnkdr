@@ -2,11 +2,18 @@ from utils.utils_pdf import split_text
 from utils.canvas_utils import draw_image
 from utils.debug import debug_box
 from utils.image_utils import load_photo, load_flag
-from config import FONT_NAME, FONT_BOLD_NAME
+from config import BORDER_FLAG_COLOR, BORDER_FLAG_WIDTH, BORDER_PHOTO_COLOR, BORDER_PHOTO_WIDTH, FONT_NAME, FONT_BOLD_NAME
 
 def render_photo(c, participant, x, y, w, h, debug=False):
     photo = load_photo(participant.photo, w, h, getattr(participant, "genre", ""))
     draw_image(c, photo, x, y, w, h)
+
+    # bordure photo
+    c.setLineWidth(1)
+    c.setLineWidth(BORDER_PHOTO_WIDTH)
+    c.setStrokeColor(BORDER_PHOTO_COLOR)
+    c.rect(x, y, w, h, stroke=1, fill=0)
+
     if debug:
         debug_box(c, x, y, w, h, "photo")
 
@@ -69,6 +76,12 @@ def render_free_text(c, text, x, y, w, font_size=14, line_height=16, max_chars=2
 def render_flag(c, participant, x, y, w, h, debug=False):
     flag = load_flag(participant.drapeau, w, h)
     draw_image(c, flag, x, y, w, h)
+
+    # bordure drapeau
+    c.setLineWidth(BORDER_FLAG_WIDTH)
+    c.setStrokeColor(BORDER_FLAG_COLOR)
+    c.rect(x, y, w, h, stroke=1, fill=0)
+
     if debug:
         debug_box(c, x, y, w, h, "flag")
 

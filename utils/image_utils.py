@@ -34,7 +34,6 @@ def load_photo(path, width, height, genre):
         img = Image.open(img_path).convert("RGB")
         return ImageOps.fit(img, (width, height))
 
-    # ✅ 4. dernier fallback (sécurité)
     return Image.new("RGB", (width, height), (220, 220, 220))
 
 
