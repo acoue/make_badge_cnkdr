@@ -15,7 +15,7 @@ LICENSE = "MIT"
 # ============================================================
 
 # Titre principal affiché sur le badge (header texte)
-TITLE = "MERIGNAC 26 et 27 Septembre 2026"
+TITLE = ""
 
 # Sous-titre (optionnel)
 SUBTITLE = ""
@@ -95,7 +95,7 @@ BANDEAU_H = 35
 HEADER_HEIGHT = 80
 
 # Espace réservé sous le header avant le contenu
-HEADER_SPACE = 100
+HEADER_SPACE = 80
 
 # Hauteur réservée au footer (zone interdite pour le contenu)
 FOOTER_SPACE = 100
@@ -104,7 +104,7 @@ FOOTER_SPACE = 100
 TOP_MARGIN_HEADER = 0
 
 # Espace entre le header et le titre
-SPACE_HEADER_TO_TITRE = 15
+SPACE_HEADER_TO_TITRE = 5
 
 
 # ============================================================
@@ -126,11 +126,11 @@ VERTICAL = {
     # --------------------
     # 📏 Tailles des blocs
     # --------------------
-    "PHOTO_W": 110,
-    "PHOTO_H": 140,
+    "PHOTO_W": 90,
+    "PHOTO_H": 120,
 
-    "FLAG_W": 70,
-    "FLAG_H": 42,
+    "FLAG_W": 90,
+    "FLAG_H": 50,
 
     "NAME_BOX_W": 500,
     "NAME_BOX_H": 25,
@@ -171,21 +171,21 @@ EDITORIAL = {
     # --------------------
     # 📐 Marges globales
     # --------------------
-    "TOP_CONTENT_MARGIN": 20,   # espace sous le header
+    "TOP_CONTENT_MARGIN": 15,   # espace sous le header
 
-    "LEFT_MARGIN": 30,
-    "RIGHT_MARGIN": 30,
+    "LEFT_MARGIN": 40,
+    "RIGHT_MARGIN": 40,
 
     "COLUMN_GUTTER": 20,  # espace entre colonne photo et texte
 
     # --------------------
     # 📏 Tailles des blocs
     # --------------------
-    "PHOTO_W": 130,
-    "PHOTO_H": 170,
+    "PHOTO_W": 110,
+    "PHOTO_H": 160,
 
-    "FLAG_W": 90,
-    "FLAG_H": 50,
+    "FLAG_W": 100,
+    "FLAG_H": 70,
 
     "NAME_BOX_W": 250,
     "NAME_BOX_H": 60,
@@ -215,16 +215,16 @@ EDITORIAL = {
     # --------------------
     # 📐 Espacements
     # --------------------
-    "SPACE_NAME_TO_TEXT": 10,
-    "SPACE_TEXT_TO_FLAGROW": 10,
-    "SPACE_FLAG_TO_COUNTRY": 10,
-    "SPACE_COUNTRY_TO_PICTOS": 20,
-    "SPACE_PICTOS_TO_ROLE": 10,
+    "SPACE_NAME_TO_TEXT": 8,
+    "SPACE_TEXT_TO_FLAGROW": 8,
+    "SPACE_FLAG_TO_COUNTRY": 8,
+    "SPACE_COUNTRY_TO_PICTOS": 18,
+    "SPACE_PICTOS_TO_ROLE": 8,
 
     # --------------------
     # 🛡️ Sécurité visuelle
     # --------------------
-    "FOOTER_SAFE_MARGIN": 10,   # évite chevauchement avec footer
+    "FOOTER_SAFE_MARGIN": 20,   # évite chevauchement avec footer
 }
 
 # ============================================================
@@ -243,7 +243,7 @@ QR_BACK = {
     "COL_GAP": 18,
 
     # QR
-    "QR_SIZE": 90,
+    "QR_SIZE": 100,
     "QR_BORDER": 2,
     "QR_BOX_SIZE": 10,
     "QR_ERROR_CORRECTION": "H",

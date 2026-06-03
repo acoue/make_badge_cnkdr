@@ -36,7 +36,7 @@ pip install -r requirements.txt
 ## 4. Utilisation
 ### Layout editorial (par défaut)
 ```
-python main.py --csv participants.csv python main.py --csv participants.csv --format vertical
+python main.py --csv participants.csv 
 ```
 
 ### Layout vertical
