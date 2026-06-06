@@ -67,7 +67,5 @@ logs/
 
 assets/photos/
 *.png
-results/
-*.pdf
-results/badges.pdf
+results/*.pdf
 utils/__pycache__/*
