@@ -26,7 +26,11 @@ DOCUMENT_RECTO_VERSO = True
 # Polices utilisées dans le PDF
 FONT_NAME = "Helvetica"
 FONT_BOLD_NAME = "Helvetica-Bold"
-
+FONT_SIZE_BLOCK_NAME= 24
+FONT_SIZE_BLOCK_FREE_TEXT = 18
+FONT_SIZE_BLOCK_PAYS = 22
+FONT_SIZE_BLOCK_BANDEAU = 20
+# Couleur de texte
 # Couleur de fond du badge
 BACKGROUND_COLOR = colors.HexColor("#FFFFFF")
 
@@ -92,13 +96,13 @@ BANDEAU_H = 35
 # ============================================================
 
 # Hauteur réelle du header (image)
-HEADER_HEIGHT = 80
+HEADER_HEIGHT = 130
 
 # Espace réservé sous le header avant le contenu
-HEADER_SPACE = 80
+HEADER_SPACE = 125
 
 # Hauteur réservée au footer (zone interdite pour le contenu)
-FOOTER_SPACE = 100
+FOOTER_SPACE = 75
 
 # Marge au-dessus du header
 TOP_MARGIN_HEADER = 0
@@ -181,8 +185,8 @@ EDITORIAL = {
     # --------------------
     # 📏 Tailles des blocs
     # --------------------
-    "PHOTO_W": 110,
-    "PHOTO_H": 160,
+    "PHOTO_W": 100,
+    "PHOTO_H": 150,
 
     "FLAG_W": 100,
     "FLAG_H": 70,

@@ -1,6 +1,9 @@
 from reportlab.lib.pagesizes import A5
 
 from config import (
+    FONT_SIZE_BLOCK_NAME,
+    FONT_SIZE_BLOCK_FREE_TEXT,
+    FONT_SIZE_BLOCK_PAYS,
     HEADER_SPACE,
     FOOTER_SPACE,
     BANDEAU_H,
@@ -63,7 +66,7 @@ def draw_editorial_layout(c, participant, picto_map, debug=False):
         right_w,
         name_h,
         FONT_BOLD_NAME,
-        font_size=20,
+        FONT_SIZE_BLOCK_NAME,
         line_height=22,
         max_chars=18,
         debug=debug,
@@ -82,7 +85,7 @@ def draw_editorial_layout(c, participant, picto_map, debug=False):
         right_w,
         free_h,
         FONT_NAME,
-        font_size=15,
+        FONT_SIZE_BLOCK_FREE_TEXT,
         line_height=17,
         max_chars=18,
         debug=debug,
@@ -123,8 +126,8 @@ def draw_editorial_layout(c, participant, picto_map, debug=False):
         row2_bottom,
         right_w,
         row2_height,
-        FONT_NAME,
-        font_size=22,
+        FONT_BOLD_NAME,
+        FONT_SIZE_BLOCK_PAYS,
         line_height=24,
         max_chars=18,
         debug=debug,

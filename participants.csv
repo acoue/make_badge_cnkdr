@@ -1,6 +1,4 @@
 nom;prenom;fonction;photo;pays;drapeau;genre;ligne_libre;options
-Machura;Lukasz;Competiteur;lukasz.jpg;Poland;pl.png;M;renshi 6 dan individual;lunch,bus,sayo
-DUPONT;Jean;Competiteur;jean_dupont.jpg;France;fr.png;M;Test ligne libre;lunch,bus
-MARTIN;Anna;Coach;anna_martin.jpg;Germany;de.png;F;Test ligne libre;lunch,bus,sayo
-DURAND;Luc;Arbitre;luc_durand.jpg;Belgium;be.png;M;Test ligne libre;lunch,bus
-BERNARD;Sophie;Bénévole;sophie_bernard.jpg;Spain;es.png;F;Test ligne libre;lunch,bus,sayo
+Labru;Jean-Pierre;Delegation;labru.jpg;France;fr.png;M;Technical Director EKF;lunch,bus,sayo
+Drosoulakis;Spyridon;Delegation;drossoulakis.jpg;Greece;gr.png;M;Vice-President EKF;lunch,bus,sayo
+Cassidy;Kathryn;Delegation;cassidy.jpg;Great Britain;uk.png;F;Secretary General EKF;lunch,bus,sayo

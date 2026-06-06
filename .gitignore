@@ -70,3 +70,4 @@ assets/photos/
 results/
 *.pdf
 results/badges.pdf
+utils/__pycache__/*
