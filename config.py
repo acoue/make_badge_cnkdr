@@ -79,17 +79,16 @@ DEFAULT_ROLE_STYLE = ("PARTICIPANT", colors.HexColor("#7C7D80"))
 
 # Mapping rôle → (libellé, couleur)
 ROLE_STYLES = {
-    "coach": ("COACH", colors.HexColor("#0E7490")),
-    "competiteur": ("COMPÉTITEUR", colors.HexColor("#B91C1C")),
-    "commissaire": ("COMMISSAIRE", colors.HexColor("#77670C")),
-    "referee": ("ARBITRE", colors.HexColor("#4F46E5")),
-    "bénévole": ("BÉNÉVOLE", colors.HexColor("#15803D")),
-    "delegation": ("DÉLÉGATION", colors.HexColor("#7C3AED")),
+    "staff": ("STAFF", colors.HexColor("#0E7490")),
+    "competitor": ("COMPETITOR", colors.HexColor("#B91C1C")),
+    "volunteer": ("VOLUNTEER", colors.HexColor("#77670C")),
+    "referee": ("REFEREE", colors.HexColor("#4F46E5")),
+    "interpreter": ("INTERPRETER", colors.HexColor("#15803D")),
+    "delegation": ("DELEGATION", colors.HexColor("#7C3AED")),
 }
 
 # Hauteur du bandeau rôle
 BANDEAU_H = 35
-
 
 # ============================================================
 # 📄 PAGE / ZONES
@@ -239,28 +238,28 @@ QR_BACK = {
     "TITLE": "Informations & accès",
 
     # Mise en page générale
-    "TOP_MARGIN": 45,
-    "BOTTOM_MARGIN": 45,
-    "LEFT_MARGIN": 25,
-    "RIGHT_MARGIN": 25,
-    "ROW_GAP": 22,
-    "COL_GAP": 18,
+    "TOP_MARGIN": 30,
+    "BOTTOM_MARGIN": 30,
+    "LEFT_MARGIN": 20,
+    "RIGHT_MARGIN": 20,
+    "ROW_GAP": 20,
+    "COL_GAP": 20,
 
     # QR
-    "QR_SIZE": 100,
+    "QR_SIZE": 115,
     "QR_BORDER": 2,
     "QR_BOX_SIZE": 10,
     "QR_ERROR_CORRECTION": "H",
 
     # Logo au centre du QR (petit logo)
     "QR_LOGO_PATH": ASSETS_DIR / "qr_center_logo.png",
-    "QR_LOGO_RATIO": 0.22,   # 22% de la largeur du QR
+    "QR_LOGO_RATIO": 0.2,   # 20% de la largeur du QR
     "QR_LOGO_PADDING": 4,    # fond blanc autour du logo
 
     # Texte sous chaque QR
     "LABEL_FONT_NAME": "Helvetica",
-    "LABEL_FONT_SIZE": 9,
-    "LABEL_LINE_HEIGHT": 11,
+    "LABEL_FONT_SIZE": 13,
+    "LABEL_LINE_HEIGHT": 18,
     "LABEL_MAX_CHARS": 22,
 }
 

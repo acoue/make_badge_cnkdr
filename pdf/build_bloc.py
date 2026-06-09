@@ -3,6 +3,7 @@ from utils.canvas_utils import draw_image
 from utils.debug import debug_box
 from utils.image_utils import load_photo, load_flag
 from config import (BORDER_FLAG_COLOR, BORDER_FLAG_WIDTH, BORDER_PHOTO_COLOR, BORDER_PHOTO_WIDTH, FONT_NAME, FONT_BOLD_NAME, FONT_SIZE_BLOCK_BANDEAU,FONT_SIZE_BLOCK_NAME,FONT_SIZE_BLOCK_FREE_TEXT,FONT_SIZE_BLOCK_PAYS)
+import os
 
 def render_photo(c, participant, x, y, w, h, debug=False):
     photo = load_photo(participant.photo, w, h, getattr(participant, "genre", ""))
@@ -90,8 +91,6 @@ def render_country(c, text, x, y, w, debug=False):
     c.drawCentredString(x + w / 2, y, text)
     if debug:
         debug_box(c, x, y - FONT_SIZE_BLOCK_PAYS, w, FONT_SIZE_BLOCK_PAYS + 8, "country")
-
-import os
 
 def render_pictos(c, participant, x, y, w, size, spacing, picto_map, debug=False):
 
